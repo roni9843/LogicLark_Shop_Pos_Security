@@ -15,7 +15,7 @@ const findUserTimeLimitController = async (req, res, next) => {
     }
 
     // If the user is found, send the user data in the response
-    res.status(200).json({ user });
+    res.status(200).json({ user, status: true });
   } catch (error) {
     // Handling errors
     res.status(500).json({ message: "User not found", status: false });
